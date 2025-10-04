@@ -1,4 +1,4 @@
-# 🌍 Air Quality Index (AQI) Analysis – Delhi, January 2023  
+# Air Quality Index (AQI) Analysis – Delhi, January 2023  
 
 ## 📌 Project Overview  
 This project analyzes the **Air Quality Index (AQI)** in **Delhi (January 2023)** using time-series analysis, pollutant correlation, and AQI computation.  
@@ -82,21 +82,19 @@ A heatmap showed strong correlation between **PM2.5 and PM10**, highlighting the
 
 ```python
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
+import plotly.express as px
+import plotly.io as pio
+import plotly.graph_objects as go
+pio.templates.default = "plotly_white"
 
-# Load dataset
-df = pd.read_csv("delhi_air_quality.csv", parse_dates=["date"])
+data = pd.read_csv('delhiaqi.csv')
+print(data)
 
-# Calculate daily AQI average
-daily_aqi = df.groupby(df["date"].dt.date)["pm2_5"].mean()
+# Time Series Plot for each Air Pollutant
+fig = go.Figure()
 
-# Plot daily AQI
-plt.figure(figsize=(10,5))
-plt.plot(daily_aqi.index, daily_aqi.values, marker='o')
-plt.title("Daily Average AQI - Delhi (Jan 2023)")
-plt.xlabel("Date")
-plt.ylabel("AQI (PM2.5 concentration)")
-plt.xticks(rotation=45)
-plt.savefig("plots/daily_aqi.png")
-plt.show()
+for pollutant in ['co','no', 'no2','o3','so2','pm2_5','pm10','nh3']:
+    fig.add_trace(go.Scatter(x=data['date'], y=data[pollutant], mode='lines', name=pollutant))
+
+fig.update_layout(title='Time Series Analysis for Air Pollution in Delhi', xaxis_title='Date', yaxis_title='Concentration (µg/m³)')
+fig.show()
