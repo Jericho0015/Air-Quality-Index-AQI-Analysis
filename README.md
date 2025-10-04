@@ -36,13 +36,15 @@ The dataset contains hourly air quality measurements with the following features
 
 ### 1️⃣ AQI Distribution in January  
 AQI values were classified into standard categories (Good, Moderate, Unhealthy, etc.)  
+
 ![AQI Distribution](https://github.com/Jericho0015/Air-Quality-Index-AQI-Analysis/blob/main/Visualizations%20Graphs/AQI_category_distribution_Over_Time.PNG)  
 
 ---
 
 ### 2️⃣ Hourly Average AQI Trends  
 Average AQI was calculated for each hour of the day to detect **peak pollution hours**.  
-![Hourly AQI](plots/hourly_aqi_trend.png)  
+
+![Hourly AQI](https://github.com/Jericho0015/Air-Quality-Index-AQI-Analysis/blob/main/Visualizations%20Graphs/Hourly_Avg_AQI_Trends_in_Delhi.PNG)  
 
 ---
 
