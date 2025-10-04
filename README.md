@@ -50,13 +50,14 @@ Average AQI was calculated for each hour of the day to detect **peak pollution h
 
 ### 3️⃣ Average AQI by Day of Week  
 The analysis revealed that **Wednesdays and Thursdays had the worst air quality**.  
-![Weekly AQI](plots/weekly_aqi.png)  
+
+![Weekly AQI](https://github.com/Jericho0015/Air-Quality-Index-AQI-Analysis/blob/main/Visualizations%20Graphs/Avg_AQI_in_Week.PNG)  
 
 ---
 
 ### 4️⃣ Correlation Heatmap of Pollutants  
 A heatmap showed strong correlation between **PM2.5 and PM10**, highlighting their dominant role in AQI.  
-![Correlation Heatmap](plots/correlation_heatmap.png)  
+![Correlation Heatmap](https://github.com/Jericho0015/Air-Quality-Index-AQI-Analysis/blob/main/Visualizations%20Graphs/Correlations_between_pollution.PNG)  
 
 ---
 
